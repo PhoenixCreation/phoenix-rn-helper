@@ -1,6 +1,6 @@
 # phoenix-rn-helper
 
-`Notice`: Some components relias on the some specific packages. Make sure to install them first to thimgs to work. Full list of packages can be found [here.](#external-packages)
+`Notice`: Some components relias on the some specific packages. Make sure to install them first to things to work. Full list of packages can be found [here.](#external-packages)
 
 ## index
 
@@ -12,8 +12,8 @@
 This Component adds the pure line throughout the whole width.
 Example:
 
-```
- <Divider size={2} color="black" margin={10} />
+```js
+<Divider size={2} color="black" margin={10} />
 ```
 
 Screenshot TODO://
@@ -32,13 +32,15 @@ This component provides one little button alike which opens color pallate Model 
 
 Example:
 
-```
+```js
 <ColorSelector
-    value={flowerColor}
-    onChange={(color) => setFlowerColor(color)}
-    style={{
-        // Additional styles
-    }}
+  value={flowerColor}
+  onChange={(color) => setFlowerColor(color)}
+  style={
+    {
+      // Additional styles
+    }
+  }
 />
 ```
 
