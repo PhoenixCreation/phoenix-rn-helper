@@ -1,3 +1,11 @@
+---
+name: "Component Request"
+about: "Ask for an new Component here. Don't report problems and bugs here."
+title: "[Request] of "
+labels: ""
+assignees: ""
+---
+
 ## Reason / Motivation
 
 <!-- Why you need this component. What was reason or motivation behind this. -->
