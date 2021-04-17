@@ -1,3 +1,4 @@
 import Divider from "./Components/Divider.js";
+import ColorSelector from "./Components/ColorSelector.js";
 
-module.exports = { Divider };
+module.exports = { Divider, ColorSelector };
