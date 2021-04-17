@@ -1,3 +1,11 @@
+---
+name: "Bug Report"
+about: "Report an issue"
+title: ""
+labels: ""
+assignees: ""
+---
+
 ## Bug Description
 
 <!-- Describe what is wrong in any words that came in your mind. Just don't write 'App crashed' or I will close this immidoetly unless it's relavent-->
