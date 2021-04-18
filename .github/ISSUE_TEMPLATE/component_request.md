@@ -31,9 +31,9 @@ Description:
 ## Special Details
 
 <!-- You can add special details like which props is required, how much customization is required. -->
-<!-- You can also specify special dependancies here-->
+<!-- You can also specify special dependencies here-->
 
-<!-- This is optional but will be appriciated -->
+<!-- This is optional but will be appreciated -->
 
 ## Your contact details
 

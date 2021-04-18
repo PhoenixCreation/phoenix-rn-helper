@@ -21,7 +21,7 @@ assignees: ""
 ## minimal code / steps to reproduce
 
 <!-- Give proper details and step by step guide  that how to recreate this bug. -->
-<!-- Any type of code help will be so much appriciated -->
+<!-- Any type of code help will be so much appreciated -->
 
 ## Environment details
 
