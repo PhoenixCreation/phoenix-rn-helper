@@ -5,8 +5,9 @@
 ## index
 
 1. [Divider](#Divider)
-2. [ColorSelector](#ColorSelector)
-3. [CheckBox](#CheckBox)
+1. [ColorSelector](#ColorSelector)
+1. [CheckBox](#CheckBox)
+1. [ThemeToggler](#ThemeToggler)
 
 ## Divider
 
@@ -65,13 +66,13 @@ Example:
 <CheckBox
   value={check}
   onChange={(e) => setCheck(e)}
-  boxStyle={
-    {
-      /* main box styling */
-    }
-  }
-  TrueComponent={/* Any React-Native component */}
-  FalseCoponent={/* Any React-Native component */}
+  boxStyle={{
+    borderRadius: 0,
+    borderWidth: 2,
+    borderColor: "black",
+  }}
+  TrueComponent={() => <Text>T</Text>}
+  FalseCoponent={() => <Text>F</Text>}
 />
 ```
 
@@ -87,6 +88,50 @@ Screenshot: TODO://
 | TrueComponent  | React-Native component | No       | none                                                                                                                                                            | Component to render when checkbox value is `true`                                              |
 | FalseComponent | React-Native component | No       | none                                                                                                                                                            | Component to render when checkbox value is `false`                                             |
 
+## ThemeToggler
+
+This component provides theme toggler with smooth animation inspired from [Telegram](https://telegram.org)'s theme toggler button.
+
+`Warning`: You need to install `react-native-svg` and `react-native-reanimated` (v2) as a dependancies for this to work.
+
+Example:
+
+```js
+<ThemeToggler
+  value={theme}
+  onChange={(newTheme) => setTheme(newTheme)}
+  boxStyle={{ backgroundColor: "blue" }}
+  duration={700} // defaults to 1000(1 second)
+  sunColor="#ff0"
+  moonColor="#fff"
+/>
+```
+
+Screenshot: TODO://
+
+| Option    | Type                          | Required | Default                                                                                                                                | Description                                                                                                 |
+| --------- | ----------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| value     | "light" \| "dark"             | Yes      | none                                                                                                                                   | String value that contains current theme value                                                              |
+| onChange  | Function: ("light" \| "dark") | Yes      | none                                                                                                                                   | Function that will be called each time theme changes                                                        |
+| duration  | Number                        | No       | 1000                                                                                                                                   | Duration of animation                                                                                       |
+| boxStyle  | style object                  | No       | `{ width: 60, height: 60, borderRadius: 100, backgroundColor: "#2155ff", padding: 5, alignItems: "center", justifyContent: "center" }` | Style object for main container. Make sure to have proper backgroundColor reltive to sunColor and moonColor |
+| sunColor  | Color                         | No       | #fff                                                                                                                                   | Color of sun (light theme indicator)                                                                        |
+| moonColor | Color                         | No       | #fff                                                                                                                                   | Color of moon (dark theme indicator)                                                                        |
+
 ## External-packages
 
 - react-native-color-picker (ColorSelector)
+- react-native-reanimated@^2.1.0 (ThemeToggler)
+- react-native-svg (ThemeToggler)
+
+Quick all install
+
+```
+npm i react-native-color-picker react-native-reanimated react-native-svg
+```
+
+OR
+
+```
+yarn add react-native-color-picker react-native-reanimated react-native-svg
+```
