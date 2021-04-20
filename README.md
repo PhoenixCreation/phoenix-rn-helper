@@ -8,6 +8,7 @@
 1. [ColorSelector](#ColorSelector)
 1. [CheckBox](#CheckBox)
 1. [ThemeToggler](#ThemeToggler)
+1. [TouchHere](#TouchHere)
 
 ## Divider
 
@@ -118,11 +119,49 @@ Screenshot: TODO://
 | sunColor  | Color                         | No       | #fff                                                                                                                                   | Color of sun (light theme indicator)                                                                        |
 | moonColor | Color                         | No       | #fff                                                                                                                                   | Color of moon (dark theme indicator)                                                                        |
 
+## TouchHere
+
+> `Warning`: This component is not perfect. It is based on `Modal` component of react-native which is not that much good.
+
+This component shows a hand indicating your user to that they have to touch here. This is generaly used on onboarding page but can be used anywhere.
+
+> You have to provide absolute value of point to be shown to click. You generally want to use useLayout hook to calculate where your target element is. This is one of the drawback of this component. I might add custom component based but can't promise.
+
+`Warning`: You need to install `react-native-svg` and `react-native-reanimated` (v2) as a dependancies for this to work.
+
+Example:
+
+```js
+<TouchHere
+  x={120}
+  y={70}
+  visible={touchIndicator}
+  onRequestClose={() => setTouchIndicator(false)}
+  duration={4000}
+  delay={2000}
+  handColor="white"
+  ringColor="black"
+/>
+```
+
+Screenshot: TODO://
+
+| Option         | Type     | Required | Default | Description                                                                                                                                                                                  |
+| -------------- | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| visible        | Boolean  | Yes      | none    | The control variable to show the modal. recomended to set true in start and use delay prop to adjust timing                                                                                  |
+| onRequestClose | Function | Yes      | none    | Function that will be called on closing of component.                                                                                                                                        |
+| x              | Number   | Yes      | 100     | X cordination of touch to be shown                                                                                                                                                           |
+| y              | Number   | Yes      | 100     | Y cordination of touch to be shown                                                                                                                                                           |
+| duration       | Number   | No       | 3500    | Duration of the whole animation includes both hand down and waves so make sure to have higher value                                                                                          |
+| delay          | Number   | No       | 0       | How much time after animation should be shown. Generally you want to wait for the user to touch on desired location and if not touched then show this so you can use delay property for that |
+| handColor      | Color    | No       | #fff    | Color of hand. It is just outline like color. Whole hand won't be filled with this color because it is better to show as much as background to user as possible                              |
+| ringColor      | Color    | No       | #fff    | Color of waves. Currently 2 waves will be shown.                                                                                                                                             |
+
 ## External-packages
 
 - react-native-color-picker (ColorSelector)
-- react-native-reanimated@^2.1.0 (ThemeToggler)
-- react-native-svg (ThemeToggler)
+- react-native-reanimated@^2.1.0 (ThemeToggler, TouchHere)
+- react-native-svg (ThemeToggler, TouchHere)
 
 Quick all install
 
