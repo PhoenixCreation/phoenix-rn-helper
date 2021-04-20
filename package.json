@@ -1,6 +1,6 @@
 {
   "name": "phoenix-rn-helper",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "This is helper library for some quick react-native component.",
   "main": "index.js",
   "author": "phoenixcreation",
