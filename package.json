@@ -1,8 +1,9 @@
 {
   "name": "phoenix-rn-helper",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "This is helper library for some quick react-native component.",
   "main": "index.js",
+  "types": "phoenix-rn-helper.d.ts",
   "author": "phoenixcreation",
   "license": "MIT",
   "private": false,
@@ -14,5 +15,12 @@
   "homepage": "https://github.com/phoenixcreation/phoenix-rn-helper",
   "bugs": {
     "url": "https://github.com/phoenixcreation/phoenix-rn-helper/issues"
-  }
+  },
+  "keywords": [
+    "react-native",
+    "helper",
+    "phoenix",
+    "phoenix-rn-helper",
+    "react"
+  ]
 }
